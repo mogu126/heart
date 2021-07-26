@@ -2977,4 +2977,3 @@ spec:
       app.kubernetes.io/name: argocd-server
   policyTypes:
   - Ingress
-{"mode":"full","isActive":false}

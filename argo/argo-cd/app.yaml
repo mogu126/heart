@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/mogu126/heart.git
+    repoURL: https://github.com/mogu126/heart
     targetRevision: HEAD
     path: argo/example-app
     directory:
