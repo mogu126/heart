@@ -7,7 +7,7 @@ metadata:
     app: example-app
     test: test
   annotations:
-    fluxcd.io/tag.example-app: glob:1.0.*
+    fluxcd.io/tag.example-app: semver:~1.0
     fluxcd.io/automated: 'true'
 spec:
   selector:
@@ -30,12 +30,12 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 5000
-        livenessProbe:
-          httpGet:
-            path: /status
-            port: 5000
-          initialDelaySeconds: 3
-          periodSeconds: 3
+        # livenessProbe:
+        #   httpGet:
+        #     path: /status
+        #     port: 5000
+        #   initialDelaySeconds: 3
+        #   periodSeconds: 3
         resources:
           requests:
             memory: "64Mi"
@@ -44,16 +44,16 @@ spec:
             memory: "256Mi"
             cpu: "500m"
 #NOTE: comment out `volumeMounts` section for configmap and\or secret guide
-        volumeMounts:
-        - name: secret-volume
-          mountPath: /secrets/
-        - name: config-volume
-          mountPath: /configs/
+        # volumeMounts:
+        # - name: secret-volume
+        #   mountPath: /secrets/
+        # - name: config-volume
+        #   mountPath: /configs/
 #NOTE: comment out `volumes` section for configmap and\or secret guide
-      volumes:
-      - name: secret-volume
-        secret:
-          secretName: mysecret
-      - name: config-volume
-        configMap:
-          name: example-config #name of our configmap object
+      # volumes:
+      # - name: secret-volume
+      #   secret:
+      #     secretName: mysecret
+      # - name: config-volume
+      #   configMap:
+      #     name: example-config #name of our configmap object
