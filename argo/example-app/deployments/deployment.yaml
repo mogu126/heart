@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: example-app
-        image: mogu126/python:1.0.1
+        image: mogu126/python:1.0.2
         imagePullPolicy: Never
         ports:
         - containerPort: 5000
