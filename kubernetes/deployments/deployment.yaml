@@ -27,7 +27,7 @@ spec:
       containers:
       - name: example-app
         image: mogu126/python:1.0.0
-        imagePullPolicy: Always
+        imagePullPolicy: Never
         ports:
         - containerPort: 5000
         # livenessProbe:
