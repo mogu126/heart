@@ -26,8 +26,8 @@ spec:
     spec:
       containers:
       - name: example-app
-        image: aimvector/python:1.0.4
-        imagePullPolicy: Always
+        image: mogu126/python:1.0.4
+        imagePullPolicy: Never
         ports:
         - containerPort: 5000
         livenessProbe:
